@@ -1,8 +1,10 @@
 function compute()
 {
     var principal = document.getElementById("principal").value;
-    if(principal == 0){
+    if(principal <= 0){
         window.alert("Enter a positive number");
+        document.getElementById('principal').focus();
+        return;
     }
     else{
         var rate = document.getElementById("rate").value;
